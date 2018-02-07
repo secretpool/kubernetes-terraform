@@ -12,3 +12,6 @@ plan: .terraform/plan
 
 apply: plan
 	terraform apply ".terraform/plan"
+
+destroy:
+	terraform destroy -force
