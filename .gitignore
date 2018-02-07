@@ -1,0 +1,7 @@
+# .gitignore
+*.tfstate
+*.tfstate.backup
+.terraform/
+manifests-networking/
+auth/
+tls/
