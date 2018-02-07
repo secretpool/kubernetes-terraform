@@ -7,19 +7,29 @@ Typhoon is a minimal and free Kubernetes distribution.
 * Free (freedom and cost) and privacy-respecting
 * Practical for labs, datacenters, and clouds
 
-Typhoon distributes upstream Kubernetes, architectural conventions, and cluster addons, much like a GNU/Linux distribution provides the Linux kernel and userspace components.
+Typhoon distributes upstream Kubernetes, architectural conventions, and cluster
+addons, much like a GNU/Linux distribution provides the Linux kernel and
+userspace components.
 
 ## Features <a href="https://www.cncf.io/certification/software-conformance/"><img align="right" src="https://storage.googleapis.com/poseidon/certified-kubernetes.png"></a>
 
-* Kubernetes v1.9.2 (upstream, via [kubernetes-incubator/bootkube](https://github.com/kubernetes-incubator/bootkube))
-* Single or multi-master, workloads isolated on workers, [Calico](https://www.projectcalico.org/) or [flannel](https://github.com/coreos/flannel) networking
-* On-cluster etcd with TLS, [RBAC](https://kubernetes.io/docs/admin/authorization/rbac/)-enabled, [network policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
-* Ready for Ingress, Dashboards, Metrics, and other optional [addons](https://typhoon.psdn.io/addons/overview/)
+* Kubernetes v1.9.2 (upstream, via
+  [kubernetes-incubator/bootkube](https://github.com/kubernetes-incubator/bootkube))
+* Single or multi-master, workloads isolated on workers,
+  [Calico](https://www.projectcalico.org/) or
+  [flannel](https://github.com/coreos/flannel) networking
+* On-cluster etcd with TLS,
+  [RBAC](https://kubernetes.io/docs/admin/authorization/rbac/)-enabled, [network
+  policy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+* Ready for Ingress, Dashboards, Metrics, and other optional
+  [addons](https://typhoon.psdn.io/addons/overview/)
 
 ## Docs
 
-Please see the [official docs](https://typhoon.psdn.io) and the Digital Ocean [tutorial](https://typhoon.psdn.io/digital-ocean/).
-Read [concepts](https://typhoon.psdn.io/concepts/) to learn about Terraform, modules, and organizing resources.
+Please see the [official docs](https://typhoon.psdn.io) and the Digital Ocean
+[tutorial](https://typhoon.psdn.io/digital-ocean/).  Read
+[concepts](https://typhoon.psdn.io/concepts/) to learn about Terraform, modules,
+and organizing resources.
 
 ## Install
 Install terraform on your system:
@@ -29,9 +39,9 @@ $ brew install terraform
 
 Add the terraform-provider-ct plugin binary for your system:
 ```
-$ wget https://github.com/coreos/terraform-provider-ct/releases/download/v0.2.0/terraform-provider-ct-v0.2.0-linux-amd64.tar.gz
-$ tar xzf terraform-provider-ct-v0.2.0-linux-amd64.tar.gz
-$ mv terraform-provider-ct-v0.2.0-linux-amd64/terraform-provider-ct /usr/local/bin/
+$ wget https://github.com/coreos/terraform-provider-ct/releases/download/v0.2.0/terraform-provider-ct-v0.2.0-darwin-amd64.tar.gz
+$ tar xzf terraform-provider-ct-v0.2.0-darwin-amd64.tar.gz
+$ mv terraform-provider-ct-v0.2.0-darwin-amd64/terraform-provider-ct /usr/local/bin/
 ```
 
 Add the plugin to your ~/.terraformrc:
@@ -41,9 +51,11 @@ providers {
 }
 ```
 
-Initial bootstrapping requires bootkube.service be started on one controller node. Terraform uses ssh-agent to automate this step. Add your SSH private key to ssh-agent:
+Initial bootstrapping requires bootkube.service be started on one controller
+node. Terraform uses ssh-agent to automate this step. Add your SSH private key
+to ssh-agent:
 ```
-$ ssh-add ~/.ssh/id_rsa
+$ ssh-add ~/.ssh/digital-ocean-hanzo
 $ ssh-add -L
 ```
 
