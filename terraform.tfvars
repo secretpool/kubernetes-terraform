@@ -1,5 +1,5 @@
-asset_dir = "."
-cluster_name = "secretpool"
+asset_dir = "./.terraform/assets"
+cluster_name = "k8s"
 dns_zone = "secretpool.org"
 region = "sfo2"
 token = "107c684cc64c22cc9d5e89804993d060d3d3f23409555bbf45617a41aa34d84f"
