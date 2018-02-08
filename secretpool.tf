@@ -1,4 +1,4 @@
-module "digital-ocean-secretpool" {
+module "secretpool" {
   source = "git::https://github.com/poseidon/typhoon//digital-ocean/container-linux/kubernetes?ref=v1.9.2"
 
   providers = {
