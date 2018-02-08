@@ -1,9 +1,10 @@
 # .gitignore
 *.tfstate
 *.tfstate.backup
+.terraform.tfstate.*
 .terraform/
-manifests-networking/
 auth/
-tls/
 bootstrap-manifests/
+manifests-networking/
 manifests/
+tls/

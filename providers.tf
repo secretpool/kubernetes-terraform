@@ -1,8 +1,3 @@
-variable "token" {
-  type        = "string"
-  description = "Digital Ocean token"
-}
-
 provider "digitalocean" {
   version = "0.1.3"
   alias = "default"
