@@ -5,13 +5,15 @@ all: plan
 init:
 	terraform init
 
+plan:
+	terraform plan
+
 .terraform/plan: init
 	terraform plan -out=.terraform/plan
 
-plan: .terraform/plan
-
-apply: plan
+apply: .terraform/plan
 	terraform apply ".terraform/plan"
 
 destroy:
 	terraform destroy -force
+
