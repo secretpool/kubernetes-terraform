@@ -6,7 +6,7 @@ variable "token" {
 provider "digitalocean" {
   version = "0.1.3"
   alias = "default"
-  token = "${var.token}"
+  token = "107c684cc64c22cc9d5e89804993d060d3d3f23409555bbf45617a41aa34d84f"
 }
 
 provider "local" {
