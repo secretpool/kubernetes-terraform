@@ -1,5 +1,5 @@
 export DIGITALOCEAN_TOKEN := 107c684cc64c22cc9d5e89804993d060d3d3f23409555bbf45617a41aa34d84f
-export KUBECONFIG 		  := .terraform/assets/auth/kubeconfig
+export KUBECONFIG 		  := assets/auth/kubeconfig
 
 all: plan
 
@@ -10,10 +10,10 @@ plan:
 	terraform plan
 
 .terraform/plan: init
-	terraform plan -out=.terraform/plan
+	terraform plan -out=assets/plan
 
 apply: .terraform/plan
-	terraform apply ".terraform/plan"
+	terraform apply "assets/plan"
 
 destroy:
 	terraform destroy -force

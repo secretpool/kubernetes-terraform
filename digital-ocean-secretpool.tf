@@ -21,5 +21,5 @@ module "digital-ocean-secretpool" {
   ssh_fingerprints = ["7e:ae:d9:87:6b:c3:92:46:d2:7d:ae:f6:77:0b:88:fe"]
 
   # output assets dir
-  asset_dir = "./.terraform/assets"
+  asset_dir = "assets"
 }
