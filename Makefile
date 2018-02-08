@@ -21,3 +21,6 @@ destroy:
 get:
 	kubectl get nodes
 	kubectl get pods --all-namespaces
+
+deploy-dashboard:
+	kubectl apply -f services/dashboard -R
