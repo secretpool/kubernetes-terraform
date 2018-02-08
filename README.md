@@ -61,7 +61,7 @@ $ ssh-add -L
 
 Initialize the config directory if this is the first use with Terraform:
 ```
-$ terraform init
+$ make init
 ```
 
 Get or update Terraform modules:
@@ -74,13 +74,13 @@ Get: git::https://github.com/poseidon/bootkube-terraform.git?ref=v0.10.0 (update
 
 Plan the resources to be created:
 ```
-$ terraform plan
+$ make plan
 Plan: 54 to add, 0 to change, 0 to destroy.
 ```
 
 Apply the changes to create the cluster:
 ```
-$ terraform apply
+$ make apply
 module.digital-ocean-nemo.null_resource.bootkube-start: Still creating... (30s elapsed)
 module.digital-ocean-nemo.null_resource.bootkube-start: Provisioning with 'remote-exec'...
 ...
